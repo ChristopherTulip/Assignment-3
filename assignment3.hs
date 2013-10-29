@@ -173,11 +173,11 @@ merge [] ys  							= ys
 merge (x:xs) (y:ys) 			= x : y : merge xs ys
 
 sortCars car1 car2
-	| (ident car1) > (ident car2)	= GT
-	| otherwise 						= LT
+	| (ident car1) > (ident car2)		= LT
+	| otherwise 						= GT
 
 sortState state1 state2
-	| (hVal state1) > (hVal state2)	= GT
+	| (hVal state1) > (hVal state2)		= GT
 	| otherwise 						= LT
 
 getNthStates :: State -> Int ->[State]
